@@ -1,4 +1,6 @@
-mytest
+Exercice
 ======
 
-A Symfony project created on July 19, 2015, 7:46 pm.
+MOOC Symfony 2 Project
+
+https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-symfony2
