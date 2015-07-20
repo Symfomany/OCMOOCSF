@@ -1,0 +1,14 @@
+# src/OC/PlatformBundle/Resources/config/services.yml
+parameters:
+    purger.class: OC\PlatformBundle\Purger\Purger
+
+services:
+  oc_platform.advert_purger:
+    class: "%purger.class%"
+    arguments:    ["@oc_platform.repository.advert", "@doctrine.orm.entity_manager"]
+
+  oc_platform.repository.advert:
+    class: OC\PlatformBundle\Entity\AdvertRepository
+    factory_service: doctrine.orm.default_entity_manager
+    factory_method: getRepository
+    arguments: ['OCPlatformBundle:Advert']
